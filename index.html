@@ -313,11 +313,7 @@ footer{position:relative;z-index:3;text-align:center;padding:12px 20px 18px;font
   <div class="wrap">
     <h2 class="title from-left">Mi historia<br>en movimiento</h2>
     <div class="video-box zoom">
-      <video id="vid" controls playsinline preload="metadata" poster="images/ruth-portada.jpg"><source src="video/ruth.mp4" type="video/mp4"></video>
-      <div class="video-fallback" id="vidFallback" hidden>
-        <p>Guarda el video en <b>video/ruth.mp4</b> para verlo aquí.</p>
-        <a class="btn" href="https://canva.link/n3g1arv1uko9cpj" target="_blank" rel="noopener">Ver video en Canva</a>
-      </div>
+      <iframe src="https://www.youtube.com/embed/JhomvtQ8i5c" title="Video de Ruth" style="width:100%;aspect-ratio:16/9;border:0;border-radius:14px;display:block" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -467,10 +463,6 @@ document.querySelectorAll('.tilt').forEach(c=>{
     c.style.transition='box-shadow .3s';c.style.transform=`perspective(800px) rotateY(${x*12}deg) rotateX(${-y*12}deg) translateY(-8px)`});
   c.addEventListener('mouseleave',()=>{c.style.transition='transform .6s';c.style.transform=''});
 });
-
-// video: si falta el archivo, muestra el botón de Canva
-const vid=document.getElementById('vid');
-vid.querySelector('source').addEventListener('error',()=>{vid.style.display='none';document.getElementById('vidFallback').hidden=false});
 
 // formulario -> abre el correo
 document.getElementById('form').addEventListener('submit',e=>{
